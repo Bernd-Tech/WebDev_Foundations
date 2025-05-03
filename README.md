@@ -2,5 +2,5 @@
 
 ## Exercises
 - Using text tag elements
-- Using block elements (<div>) and inline elements (<span>)
+- Using block elements and inline elements
 - Creating a table
