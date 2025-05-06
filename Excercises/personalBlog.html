@@ -1,0 +1,100 @@
+<!--
+    Task:
+     - Build a personal blog with semantic HTML
+     - add at least one header, nav, main, article, and footer element
+     - include hyperlinks, images, audio, video + embedded youtube video
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bernd's Blog</title>
+    </head>
+    <body>
+        <header style="position: sticky; top: 0; background-color: rgb(229, 226, 226); padding: 0 8px; width: 100%; margin: 0 0 20px 0;">
+            <nav style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>Welcome to Bernd's Blog</h1>
+                <ul style="list-style: none; display: flex; justify-content: flex-end; gap: 10px;">
+                    <li><a style="color: #b6610c;" href="#home">Home</a></li>
+                    <li><a style="color: #b6610c;" href="#about">About</a></li>
+                    <li><a style="color: #b6610c;" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main style="padding: 0 8px;">
+            <article>
+                <section id="about">
+                <div style="display: flex; gap: 10px">
+                    <img src="./media_files/profile.jpg" style="height: 8vh; border-radius: 50%;" alt="Profile picture of Bernd"/>
+                <h3>About me</h3>
+            </div>
+                <p>I'm a 26 years old retired dancer who will become a junior fullstack-developer in 6 months. For my first job as a developer I'm aiming to earn at least 55.000 € a month to support my family.</p>
+                <p>Besides working and studying I love to hit the gym, spend time with my family, read a good book (also enjoy poetry), listening to music (literally everyday), traveling, dancing, watching anime and just learning in general. There is so much knowledge to gain and things to experience, that I tend to be open minded for most things in life.</p>
+                <br>
+                <p style="text-align: center">Favourite poem:</p>
+                <div style="margin: 0 auto; background-color: rgb(229, 226, 226); width: 300px; padding: 2px 10px; border-radius: 15px;">
+                    <h4>Invictus</h4>
+                    <p>Out of the night that covers me,<br>
+                    Black as the pit from pole to pole<br>
+                    I thank whatever gods may be<br>
+                    For my unconquerable soul.<br>
+                    <br>
+                    In the fell clutch of circumstance<br>
+                    I have not winced nor cried aloud<br>
+                    Under the bludgeonings of chance<br>
+                    My head is bloody but unbowed.<br>
+                    <br>
+                    Beyond this place of wrath and tears<br>
+                    Looms but the horror of the shade,<br>
+                    And yet the menace of the years<br>
+                    Finds and shall find me unafraid.<br>
+                    <br>
+                    It matters not how strait the gate,<br>
+                    How charged with punishments the scroll<br>
+                    I am the master of my fate<br>
+                    I am the captain of my soul.<br>
+                    <br>
+                    - by <i>William Ernest Henley</i>
+                    </p>
+                    <br>
+                    <audio controls>
+                        <source src="./media_files/Morgan Freeman Tells A POWERFUL POEM..mp3" type="audio/mp3">
+                        Your browser does not support this audio file.
+                    </audio>
+                    <p><i>- Recital by Morgan Freeman</i></p>
+                </div>
+            </section>
+            <br>
+            <br>
+            <section>
+                <h3>What got me into Coding?</h3>
+                <p>Because of an injury I had to retire from being a professional dancer 2 years ago. A journey of reconstructing my identity and finding something in which I can wholeheartedly invest myself in followed.</p>
+                <p>I tried to analyze what other skills I might have and could develope further. After realizing that I always had a great capacity for solving problems by deconstructing them into their smallest parts, I came to the conclusion that coding might be something that would suit me well.</p>
+                <p>So I started to watch some videos about the daily lives of software developers (not the idolized ones, but the authentic ones), did research about the potential of a career as a developer and started to follow tutorials on free code camp. I have been at it ever since and made it my goal to become highly skilled in it.</p>
+                <p>I don't know exactly in which field I would like to become an expert in yet, but as Rumi said "As you start to walk on the way, the way appears.". So I guess that's what I will do for now as best as I can.
+                    <br>
+                    <br>
+                    Thrilled to be on this journey!
+                </p>
+                <br>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                <p>This video helped me at beginning:</p> 
+                <iframe  style="border-radius: 30px;" width="560" height="315" src="https://www.youtube.com/embed/zJSY8tbf_ys?si=VU1X3Pe8v5hNmXhR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+                </div>
+            </section>
+            </article>
+            <br>
+            <br>
+            <hr>
+    <footer>
+        <div id="contact">
+            <p>Bernd-Tech Enterprise</p>
+            <p><a href="mailto:info@berndtechenterprise.com">Mail us</a></p>
+            <p><a href="tel:+123456789">Call us</a></p>
+        </div>
+        <p>&copy; 2025 Welcome to Bernd's Blog</p>
+    </footer>
+        </main>
+    </body>
+    </html>
