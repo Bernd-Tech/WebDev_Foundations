@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Times New Roman; 
+}
+
+#card-container {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 1s;
+}
+
+/*#card-container:hover {
+    transform: scale(1.2);
+}*/
+
+#card-container:hover {
+  transform:  rotate(360deg);
+}
+
+.name {
+    transition: 500ms;
+}
+
+.name:hover {
+    color: rgb(50, 50, 158);
+    transform: scale(1.3);
+}
+
+.profession {
+    transition: 500ms;
+}
+
+.profession:hover {
+    transform: scale(1.15);
+}
