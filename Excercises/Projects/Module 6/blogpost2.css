@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+#blogpost {
+    width: 350px;
+    height: 550px;
+    padding: 30px;
+    background-color: white;
+    margin: 70px auto;
+    border-radius: 10px;
+    transition: 500ms;
+    line-height: 1.6;
+    overflow: auto;
+    /*scrollbar-color: purple;*/
+}
+
+.title {
+    text-align: center;
+}
+
+.lora-font {
+    font-family: "Lora", serif;
+    font-style: normal;
+  }
+
+#blogpost:hover {
+    box-shadow: 2px 2px 15px rgb(0, 0, 0, 0.2);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            height: 100vh;
+            display: grid;
+            background-color: #f4f4f4;
+            padding: 3px;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 8fr 2fr;
+            grid-template-areas: 
+                "Header Header"
+                "Sidebar content"
+                "Footer Footer";
+        }
+
+        /* .item controls how far apart grid items are. */
+        .item {
+            padding: 10px; 
+            margin: 2px;
+            text-align: center;
+        }
+
+        /* grid-area: asigns class selector to declared grid-area in grid-template-areas of grid container */
+         .Header {
+            grid-area: Header; 
+            background-color: rgb(55, 137, 137);
+        }
+
+        .Sidebar {
+            grid-area: Sidebar;
+            background-color: rgb(222, 132, 21);
+        }
+        
+        .content {
+            grid-area: content;
+            background-color: bisque;
+            color: #b28f4d;
+            text-align: left;
+        }
+
+        .Footer {
+            grid-area: Footer; 
+            background-color: rgb(134, 114, 152);
+            color: #b28f4d;
+        } 
+
+        /* Mobile: iPhone 11 */
+        @media(max-width: 500px) {
+            .grid-container {
+            display: grid;
+            background-color: #f4f4f4;
+            padding: 3px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 8fr 1fr 2fr;
+            grid-template-areas: 
+                "Header"
+                "content"
+                "Sidebar"
+                "Footer";
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item Header">Header</div>
+        <aside class="item Sidebar">Sidebar</aside>
+        <main class="content item">
+            <article class="">Article 1</article>
+            <article class="">Article 2</article>
+            <article class="">Article 3</article>
+        </main>
+        <footer class="item Footer">Footer</footer>
+    </div>
+</body>
+</html>

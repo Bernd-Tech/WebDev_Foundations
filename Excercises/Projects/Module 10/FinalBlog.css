@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --container-radius: 2.5rem;
+    --body-background: #73937E;
+    --section-background: #FFF8F0;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 10px;
+    font-family: Figtree, sans-serif;
+    background-color: var(--body-background);
+    /* display: flex;
+    flex-direction: column; 
+    Not necessary to turn body into flex container */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--section-background);
+    border-radius: var(--container-radius);
+    padding: 10px 20px;
+    position: sticky;
+    top: 10px;
+    opacity: 0.99;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    gap: 5px;
+    margin: 20px auto;
+    max-width: 100%;
+    background-color: var(--section-background);
+    border-radius: var(--container-radius);
+    line-height: 1.5;
+}
+
+main {
+    flex: 3;
+    padding: 20px;
+}
+
+aside {
+    flex: 1;
+    border-left: 1px solid var(--body-background);
+    padding: 20px;
+    line-height: 1.7;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s ease;
+}
+
+aside a:hover {
+    color: var(--body-background);
+}
+
+
+
+/* footer {
+
+} */
