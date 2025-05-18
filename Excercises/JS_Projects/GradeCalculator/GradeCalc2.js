@@ -1,10 +1,32 @@
-const score1 = parseFloat(prompt("Enter three test scores. First test score:"))
-const score2 = parseFloat(prompt("Second test score:"))
-const score3 = parseFloat(prompt("Third test score:"))
+// const score1 = parseFloat(prompt("Enter three test scores. First test score:"))
+// const score2 = parseFloat(prompt("Second test score:"))
+// const score3 = parseFloat(prompt("Third test score:"))
 
-const calculateAverage = (num1, num2, num3) => {
-    const sum = num1 + num2 + num3;
-    return sum / 3;
+const userScores = [];
+let count = 0;
+userPrompt()
+
+function userPrompt() {
+    
+    if (count === 3) {
+        return
+    }
+
+    const score = parseFloat(prompt("Enter three test scores."));
+    userScores.push(score);
+    count++;
+
+    userPrompt()
+}
+
+// const calculateAverage = (num1, num2, num3) => {
+//     const sum = num1 + num2 + num3;
+//     return sum / 3;
+// }
+
+const calculateAverage2 = (array) => {
+    const sum = array.reduce((acc, el) => acc + el, 0);
+    return sum / array.length;
 }
 
 const assignGrade = (average) => {
@@ -24,7 +46,7 @@ const assignGrade = (average) => {
 }
 
 const result = () => {
-    const average = calculateAverage(score1, score2, score3);
+    const average = calculateAverage2(userScores);
     const grade = assignGrade(average)
 
     console.log(`Score: ${average} = ${grade}`)
