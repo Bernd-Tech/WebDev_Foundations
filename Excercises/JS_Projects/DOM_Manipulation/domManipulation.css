@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.inner-circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border:  2px dotted;
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none !important;
+}
