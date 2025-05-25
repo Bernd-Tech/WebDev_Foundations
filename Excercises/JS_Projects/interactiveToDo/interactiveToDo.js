@@ -48,6 +48,6 @@ userInput.addEventListener("keydown", (e) => {
 
 /*
 Questions:
-- How can I remove surprise message if taskAmount is less than 6 (Code in l. 35 doesn't work as intended)?
+- How can I remove surprise message if taskItems.length is less than 6 (Code in l. 35 doesn't work as intended)?
 - Why does addTask need to be without "()" in addEventListener?
 */
