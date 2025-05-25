@@ -3,6 +3,15 @@ const addTaskBtn = document.getElementById("add-task-btn");
 const taskList = document.getElementById("task-list");
 const bodyContainer = document.querySelector("body")
 
+//Needs to be on global scope to be accessable for inner if statements of addTask()
+const surpriseMsg = document.createElement("div");
+surpriseMsg.innerHTML = `
+    <p style="display: inline; padding: 5px; background-color: #45425A; color: #BAA5FF; font-size: 20px;">You are a certified Overachiever. Greatness awaits you!<p>
+`;
+
+//Global counter for amount of tasks
+let taskAmount = 0;
+
 const addTask = () => {
     const task = userInput.value.trim();
 
@@ -16,26 +25,30 @@ const addTask = () => {
     taskItem.classList.add("task-item");
 
     taskList.appendChild(taskItem);
+    taskAmount++;
     userInput.value = "";
+
+    // const taskItems = document.querySelectorAll(".task-item")
 
     //remove task item
     taskItem.addEventListener("click", () => {
         taskList.removeChild(taskItem);
+        taskAmount--;
+
+        //Removing surprise msg if less than 6 tasks & surprise Msg is already displayed
+        //Check needs to be within "remove scope" and not addTask scope, executed every time a task gets removed
+        if (taskAmount < 6 && bodyContainer.contains(surpriseMsg)) {
+            bodyContainer.removeChild(surpriseMsg)
+        }
+        console.log("removed Task, total amount: ", taskAmount)
     })
 
-    //Surprise message
-    const taskItems = document.querySelectorAll("li[class='task-item']")
-
-    if (taskItems.length === 6) {
-        const surpriseMsg = document.createElement("div");
-        surpriseMsg.innerHTML = `
-            <p style="display: inline; padding: 5px; background-color: #45425A; color: #BAA5FF; font-size: 20px;">You are a certified Overachiever. Greatness awaits you!<p>
-        `;
+    //Displaying surprise message
+    if (taskAmount === 6 && !bodyContainer.contains(surpriseMsg)) {
         bodyContainer.appendChild(surpriseMsg);
-    } if (taskItems.length < 6 && bodyContainer.contains(surpriseMsg)) {
-        bodyContainer.removeChild(surpriseMsg)
-    }
+    } 
 }
+
 
 addTaskBtn.addEventListener("click", addTask);
 
@@ -45,9 +58,3 @@ userInput.addEventListener("keydown", (e) => {
         addTask();
     }
 })
-
-/*
-Questions:
-- How can I remove surprise message if taskItems.length is less than 6 (Code in l. 35 doesn't work as intended)?
-- Why does addTask need to be without "()" in addEventListener?
-*/
