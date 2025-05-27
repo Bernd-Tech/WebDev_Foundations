@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Code Execution</title>
+</head>
+<script>
+    // console.log("Start");
+    // console.log("Processing...");
+    
+    // const delayedResult = setTimeout(() => {
+    // console.log("End after 2 seconds");
+
+    // }, 2000);
+
+    // clearTimeout(delayedResult)
+    // console.log("End immediately")
+
+    // let count = 5;
+    // let loops = 0
+
+    // const codeRepetition = setInterval(() => {
+    //     count *= 2;
+    //     loops++
+    //     console.log(count)
+
+    //     if (loops === 5) {
+    //         clearInterval(codeRepetition)
+    //     }
+    // }, 1000)
+   
+/*
+    //Simulated data fetch
+   const fetchData = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        let success = Math.random() > 0.5;
+        success ? resolve("Fetched Data") : reject("Error fetching Data");
+        }, 2000)
+    })
+   }
+
+   fetchData()
+   //.then returns data when resolve() is returned by fetchData()
+   .then(data => console.log(data))
+   //.catch (for error handling) returns error when reject() is returned by fetchData()
+   .catch(error => console.log(error))
+*/
+
+const orderBurger = async () => {
+    console.log("Waiting for my Burger...");
+    try {
+        const order = await new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let burger = Math.random() > 0.5;
+                if (burger) {
+                    return resolve("Burger is ready!")
+                } else {
+                    return reject("Not enough ingredients, sorry.")
+                }
+            }, 3000)
+        })
+        console.log(order)
+    } catch (error) {
+        console.error("Not enough ingredients, sorry.")
+    }
+}
+orderBurger()
+</script>
+<body>
+    <h1>Asynchronous Code Execution</h1>
+</body>
+</html>
