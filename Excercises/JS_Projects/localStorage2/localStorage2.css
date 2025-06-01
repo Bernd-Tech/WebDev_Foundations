@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Figtree, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 40px 0;
+}
+
+#user-input {
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#addTask-btn {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    border: none;
+}
+
+#taskList {
+    list-style: none;
+    margin: 10px 0;
+}
